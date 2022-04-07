@@ -17,3 +17,17 @@ jobs:
             event/config/qa.yaml
             event/config/uat.yaml
             event/config/prod.yaml
+      - name: "validate yaml failed"
+        if: ${{ failure() }}
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.163.com
+          server_port: 465
+          # Required mail subject:
+          subject: Event config validation failed - ${{ github.job }} job of ${{ github.repository }} has ${{ job.status }}
+          to: tyreal.yang@nagarro.com
+          from: giggs0223@163.com
+          secure: true
+          body: Event config validation failed - ${{ github.job }} job in worflow ${{ github.workflow }} of ${{ github.repository }} has ${{ job.status }}
+          username: ${{ secrets.EMAILUSERNAME }}
+          password: ${{ secrets.EMAILPASSWORD }}

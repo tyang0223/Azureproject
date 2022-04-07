@@ -1,5 +1,4 @@
-jobXXXsteps:
-  stXXXep:
-    step1saddasd: 'backup'
-    step22: 'restore'
-    xxxx: asdasd
+jobsteps:
+  step:
+    step1: 'backup'
+    step2: 'restore'

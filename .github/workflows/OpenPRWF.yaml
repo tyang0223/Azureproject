@@ -22,5 +22,5 @@ jobs:
           from: giggs0223@163.com
           secure: true
           body: PR needs to be reviewed
-          username: ${{ secrets.EMAILPASSWORD }}
-          password: ${{ secrets.EMAILUSERNAME }}
+          username: ${{ secrets.EMAILUSERNAME }}
+          password: ${{ secrets.EMAILPASSWORD }}

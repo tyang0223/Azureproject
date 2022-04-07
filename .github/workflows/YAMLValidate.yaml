@@ -13,4 +13,4 @@ jobs:
         with:
           schemaPath: 'event/schema.json'
           files: |
-            event/connfig/*.yaml
+            event/config/*.yaml

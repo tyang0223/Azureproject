@@ -1,0 +1,14 @@
+name: Shell Commands
+
+on: [push]
+
+jobs:
+  run-first-workflow:
+    runs-on: ubuntu-latest
+    steps:
+      - name: echo a string
+        run: echo "hello my first github workflow"
+      - name: check nodeJS & NPM version
+        run: |
+          node -v
+          npm -v

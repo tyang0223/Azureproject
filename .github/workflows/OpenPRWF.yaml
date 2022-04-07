@@ -22,3 +22,5 @@ jobs:
           from: giggs0223@163.com
           secure: true
           body: PR needs to be reviewed
+          username: giggs0223@163.com
+          password: tyreal302597223

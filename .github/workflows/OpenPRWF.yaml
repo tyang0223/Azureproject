@@ -11,3 +11,14 @@ jobs:
     steps:
       - name: "create pull reqeust to master branch"
         run: echo "PR open for reviewing"
+      - name: "send email"
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.163.com
+          server_port: 465
+          # Required mail subject:
+          subject: Could you please review this PR?
+          to: tyreal.yang@nagarro.com
+          from: giggs0223@163.com
+          secure: true
+          body: PR needs to be reviewed

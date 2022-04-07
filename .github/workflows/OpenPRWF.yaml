@@ -1,0 +1,13 @@
+name: workflow of open pull reqeust
+
+on: 
+   pull_request:
+     branches:
+       - master
+
+jobs:
+  pull-reqeust-workflow:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "create pull reqeust to master branch"
+        run: echo "PR open for reviewing"

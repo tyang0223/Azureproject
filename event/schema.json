@@ -1,2 +1,8 @@
 {
+  "jobsteps": {
+    "step": {
+      "step1": "string",
+      "step2": "string"
+    }
+  }
 }

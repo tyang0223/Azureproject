@@ -12,3 +12,9 @@ jobs:
         run: |
           node -v
           npm -v
+      - name: Validate YAML
+        uses: brittonhayes/validate-yaml@v0.3.0
+        with:
+          schemaPath: 'event/schema.json'
+          files: |
+            event/config/*.yaml

@@ -1,4 +1,0 @@
-jobsteps:
-  step:
-    step1: 'backup'
-    step: 'restore'

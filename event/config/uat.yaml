@@ -1,0 +1,4 @@
+jobstseps:
+  stsep:
+    stsep1: 'backup'
+    stsep: 'restore'

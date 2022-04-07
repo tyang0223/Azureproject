@@ -13,4 +13,11 @@ jobs:
         with:
           schemaPath: 'event/schema.json'
           files: |
+            event/config/dev.yaml
+            event/config/qa.yaml
             event/config/uat.yaml
+            event/config/prod.yaml
+            event/config/event-dev.yaml
+            event/config/event-qa.yaml
+            event/config/event-uat.yaml
+            event/config/event-prod.yaml

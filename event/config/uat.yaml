@@ -1,4 +1,4 @@
-jobstseps:
-  stsep:
-    stsep1: 'backup'
-    stsep: 'restore'
+jobsteps:
+  step:
+    step1: 'backup'
+    step2: 'restore'

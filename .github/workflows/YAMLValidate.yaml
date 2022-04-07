@@ -1,6 +1,6 @@
 name: YAML validate WF
 
-on: [PUSH]
+on: [push]
 
 jobs:
   yaml-validation-workflow:

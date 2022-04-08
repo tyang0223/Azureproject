@@ -18,8 +18,9 @@ jobs:
       - name: 'check out'
         uses: actions/checkout@v3
       - name: 'upload to azure blob storage'
-        uses: bacongobbler/azure-blob-storage-upload@v1.1.1
+        uses: LanceMcCarthy/Action-AzureBlobUpload@v1.11.0
         with:
-          source_dir: static
+          source_folder: static
           container_name: test10
+          destination_folder: static
           connection_string: ${{ secrets.CONNECTIONSTRING }}

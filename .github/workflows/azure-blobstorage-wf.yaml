@@ -18,7 +18,7 @@ jobs:
       - name: 'check out'
         uses: actions/checkout@v3
       - name: 'upload to azure blob storage'
-        uses: bacongobbler/azure-blob-storage-upload@main
+        uses: bacongobbler/azure-blob-storage-upload@v1.1.1
         with:
           source_dir: static
           container_name: test10

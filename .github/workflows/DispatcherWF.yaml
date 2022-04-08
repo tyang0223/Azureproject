@@ -1,0 +1,24 @@
+name: repository dispatcher workflow
+on:
+  repository_dispatch:
+    types: [build, release]
+
+jobs:
+  repository-dispatcher-workflow:
+    runs-on: ubuntu-latest
+    steps:
+      - name: get client payload
+        run: echo "client payload:" "${{github.event.client_payload.env}}"
+      - name: send email
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.163.com
+          server_port: 465
+          # Required mail subject:
+          subject: repository dispatcher workflow
+          to: tyreal.yang@nagarro.com
+          from: giggs0223@163.com
+          secure: true
+          body: client_payload.env = ${{github.event.client_payload.env}}
+          username: ${{ secrets.EMAILUSERNAME }}
+          password: ${{ secrets.EMAILPASSWORD }}

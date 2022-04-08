@@ -23,4 +23,4 @@ jobs:
           source_dir: $source_dir
           container_name: $container_name
           connection_string: ${{ secrets.CONNECTIONSTRING }}
-          sync: 'true'
+          sync: 'false'

@@ -5,7 +5,6 @@ on:
     inputs:
       operation:
         description: 'desc your operation'
-        default: 'apply'
         required: true
   pull_request:
     branches:

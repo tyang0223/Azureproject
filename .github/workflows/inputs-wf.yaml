@@ -1,19 +1,24 @@
 name: workflow inputs
 
 on:
-  workflow_dispatch:
-    inputs:
-      operation:
-        description: 'desc your operation'
-        required: true
+  pull_request:
+    types: [opened]
+  issue_comment:
+    types: [created]
+    
 jobs:
-  inputs-workflow:
+  deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: print inputs
-        if: github.event.inputs.operation == 'apply'
-        run: |
-          echo inputs of operation is : ${{ github.event.inputs.operation }}
+      - uses: khan/pull-request-comment-trigger@v1.1.0
+        id: check
+        with:
+          trigger: '@deploy'
+          reaction: rocket
+        env:
+          GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
+      - run: 'echo Found it!'
+        if: steps.check.outputs.triggered == 'true'
 
 
     

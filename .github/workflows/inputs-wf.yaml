@@ -14,6 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: print inputs
+        if: github.event.inputs.operation == 'apply'
         run: |
           echo inputs of operation is : ${{ github.event.inputs.operation }}
 

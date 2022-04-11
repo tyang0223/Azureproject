@@ -18,6 +18,8 @@ jobs:
           GITHUB_TOKEN: '${{ secrets.TOKEN }}'
       - run: 'echo apply changes!'
         if: steps.check.outputs.triggered == 'true'
+      - run: 'echo can not apply'
+        if: steps.check.outputs.triggered == 'false'
 
 
     

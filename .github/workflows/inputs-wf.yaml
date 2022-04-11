@@ -13,8 +13,7 @@ jobs:
       - uses: khan/pull-request-comment-trigger@v1.1.0
         id: check
         with:
-          trigger: '@deploy'
-          reaction: rocket
+          trigger: '@tyang'
         env:
           GITHUB_TOKEN: '${{ secrets.TOKEN }}'
       - run: 'echo Found it!'

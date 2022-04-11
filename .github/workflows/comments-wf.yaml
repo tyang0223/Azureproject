@@ -7,7 +7,7 @@ on:
     types: [created]
     
 jobs:
-  deploy:
+  apply:
     runs-on: ubuntu-latest
     steps:
       - uses: khan/pull-request-comment-trigger@v1.1.0

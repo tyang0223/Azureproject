@@ -4,24 +4,19 @@ on:
   pull_request:
     branches:
       - master
-  workflow_call:
+  workflow_dispatch:
     inputs:
       operation:
-        description: desc your operation
-        default: "apply"
+        description: 'desc your operation'
+        default: 'apply'
         required: true
-        type: string
-
-  
-  
-
 jobs:
   inputs-workflow:
     runs-on: ubuntu-latest
     steps:
       - name: print inputs
         run: |
-          echo inputs of operation is : ${{ inputs.operation }}
+          echo inputs of operation is : ${{ github.event.inputs.operation }}
 
 
     

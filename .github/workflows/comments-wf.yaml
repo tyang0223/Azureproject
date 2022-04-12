@@ -7,7 +7,7 @@ on:
     types: [created]
     
 jobs:
-  apply:
+  apply-slack-notify:
     runs-on: ubuntu-latest
     steps:
       - name: 'check comments'
@@ -28,7 +28,7 @@ jobs:
         uses: docker://technosophos/slack-notify
         env:
           SLACK_WEBHOOK:  ${{ secrets.SLACK_WEBHOOK }}
-          SLACK_MESSAGE: "Your changes have been applied !"
+          SLACK_MESSAGE: "${{steps.check.outputs.triggered == 'true' ? 'Your changes have been applied !' : 'There are some issues on your changes, please solve it!'}}"
         
 
 

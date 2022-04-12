@@ -1,4 +1,4 @@
-name: workflow inputs
+name: comments check and slack notification
 
 on:
   pull_request:

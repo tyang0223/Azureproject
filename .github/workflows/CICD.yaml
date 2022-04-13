@@ -35,7 +35,7 @@ jobs:
         uses: fjogeleit/yaml-update-action@main
         with:
           valueFile: 'deployment/deployment.yaml'
-          propertyPath: 'backend.version'
+          propertyPath: 'spec.template.spec.template.metadata.labels.app'
           value: '1.1.0'
           branch: development/infrastructure
           targetBranch: master

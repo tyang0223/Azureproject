@@ -37,9 +37,9 @@ jobs:
           valueFile: 'deployment/deployment.yaml'
           propertyPath: 'spec.template.spec.template.metadata.labels.app'
           value: '1.1.0'
-          branch: development/infrastructure
+          branch: master
           targetBranch: master
-          createPR: true
+          createPR: false
           message: 'update image version to deployment.yaml' 
           token: '${{ secrets.TOKEN }}'
           description: 'update image version'

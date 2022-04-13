@@ -16,7 +16,7 @@ jobs:
       - name: 'Unit test'
         run:  echo "unit test"
       - name: 'Maven build'
-        run: echo "maven build'
+        run: echo "maven build"
   docker-image-build:
     runs-on: ubuntu-latest
     needs: check-out

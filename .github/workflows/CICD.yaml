@@ -36,7 +36,7 @@ jobs:
         with:
           valueFile: 'deployment/deployment.yaml'
           propertyPath: 'spec.template.spec.template.metadata.labels.app'
-          value: '1.1.0'
+          value: '2.1.0'
           branch: master
           targetBranch: master
           createPR: false
